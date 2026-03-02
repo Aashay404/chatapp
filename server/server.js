@@ -14,32 +14,32 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes
+
 app.use("/api/auth", require("./routes/authRoutes"));
 
 app.get("/", (req, res) => {
   res.send("API Running");
 });
 
-// 🔥 Create HTTP server
+
 const server = http.createServer(app);
 
-// 🔥 Initialize Socket.io
+
 const io = new Server(server, {
   cors: {
     origin: "*",
   },
 });
 
-// 🔥 Socket logic
+
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
 
-  // When user joins
+  
   socket.on("user_online", (username) => {
     onlineUsers.push({ id: socket.id, name: username });
 
-    // Remove duplicates
+    
     onlineUsers = onlineUsers.filter(
       (user, index, self) =>
         index === self.findIndex((u) => u.name === user.name)
