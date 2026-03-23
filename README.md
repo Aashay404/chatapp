@@ -59,6 +59,4 @@ cd chatapp
 npm install
 npm run dev
 
-Frontend runs on http://localhost:5173
 
-Backend runs on http://localhost:5000
