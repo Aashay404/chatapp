@@ -53,7 +53,7 @@ Run the backend:
 
 npm run dev
 
-### Frontend
+### Frontend system
 
 cd chatapp
 npm install
