@@ -49,7 +49,7 @@ PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/chatapp
 JWT_SECRET=your_secret_key
 
-Run the backend :
+Run the backend on :
 
 npm run dev
 
