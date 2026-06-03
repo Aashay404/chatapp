@@ -35,7 +35,7 @@ Chatapp/
 
 chatapp/ (Frontend)
 
-server/ (Backend)
+server/ Backend
 
 ## Setup
 ### Backend
